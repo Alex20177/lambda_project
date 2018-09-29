@@ -1,0 +1,10 @@
+Lambda expression is an anonymous function
+	Not having name
+	Not having modifier
+	Not having return type
+	
+Method declare:
+
+public void helloMethod(){
+	System.out.println("Hello World!!!");
+}
