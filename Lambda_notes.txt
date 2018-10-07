@@ -8,3 +8,126 @@ Method declare:
 public void helloMethod(){
 	System.out.println("Hello World!!!");
 }
+
+Lambda expression:
+
+()->{System.out.println("Hello World!!!");}
+
+No name, modifier, return type.
+
+
+-----------
+
+public void add(int a, int b){
+	System.out.println(a+b);	
+}
+
+(int a, int b) -> {System.out.println(a+b);}
+(a,b)->System.out.println(a+b);
+
+-----------
+
+public int getLength(String s){
+	return s.length();
+}
+
+Reducting lambda expresion:
+
+(String s)->{return s.length();}
+(String s)->return s.length();
+(s)->return s.length();
+s->return s.length();
+s->s.lenght
+
+******Functional interface******
+Interface used to call a lambda expresion
+Interface has single abstract method (SAM)
+
+Examples:
+
+Runnable - contains one method run()
+Callable - contains one method call()
+ActionListener - contains one method actionPerformed()
+Comparable - contains one method compareTo()
+
+The @FunctionalInterface tag help to the compiler to find out any kind of error in compiling time 
+about functional interface.
+
+******Inheritance******
+
+Case 1: Child has SAM from parent.
+
+@FunctionalInterface
+interface p{
+	public void m1();
+}
+
+@FunctionalInterface
+interface c extends p{
+}
+
+Case 2: Child and parent have the same only one SAM
+
+@FunctionalInterface
+interface p{
+	public void m1();
+}
+
+@FunctionalInterface
+interface c extends p{
+	public void m1();
+}
+
+Case 3: child can't have other SAM except from parent
+
+Case 4: any interface can extends from a functional interface
+
+@FunctionalInterface
+interface p{
+	public void m1();
+}
+
+interface c extends p{
+	public void m2();
+}
+
+
+*****Predefined Funcional Interfaces - PREDICATE*****
+A predicate is a functional with a single argument and return boolean value
+
+Functional interfaces:
+
+Predicate
+Function
+Consumer
+Supplier
+
+*Provided by JAVA
+java.util.functions
+
+
+Predicate - test()
+
+interface Predicate<T>{
+	public boolean  test(T t)
+}
+
+Predicate<Integer> p = i->i>10;
+System.out.println(p.test(10));
+
+Predicate<Collection> p = c->c.isEmpty();
+List<String> l = new ArrayList<>();
+sout(c.test(l));
+
+Comparable - compareTo()
+Comparator - compare()
+
+
+
+
+
+
+
+
+
+

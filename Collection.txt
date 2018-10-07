@@ -1,0 +1,83 @@
+Collection
+
+Group of object as a single entity
+
+Types of collections:
+
+1) List
+
+	Insertion order
+	Duplicate object allow
+	
+	ArrayList
+	LinkedList
+	Vector
+	
+	ArrayList implements List interface
+	
+	ArrayList<String> l = new ArrayList<String>();
+	l.add("Sunny");
+	l.add("Bunny");
+	l.add("Chunny");
+	l.add("Sunny");
+	
+
+2) Set
+
+	Duplicates are not allow
+	Order not preserver
+
+	HashSet
+	TreeSet
+	
+	HashSet<String> h = HashSet<String>();
+	h.add("Sunny");
+	h.add("Bunny");
+	h.add("Chunny");
+	h.add("Sunny");	
+
+
+3) Map
+
+	Key-Values pair representation
+	Duplicates keys do not allow
+	Do not preserver order
+	
+	HashMap
+	TreeMap
+	
+	HashMap<String,String> m = new HashMap<String,String>();
+	m.put("A","Apple");
+	m.put("Z","Zebra");
+	m.put("Durga","Java");
+	m.put("B","Boy");
+	m.put("T","Tiger");
+	
+
+Comparator interface
+
+Comparator interface contains only one method "compare" (SAM Single Abstract Method)
+*To define our own sorting
+(Customized sorting)
+
+public int compare(Object obj1, Object obj2);
+
+return -1 obj1 has to come before obj2 (20,10)
+return +1 obj1 has to come after obj2  (10,20)
+return 0 obj1 and obj2 are equal       (20,20)
+
+*****Sorting elements without lambda expresion*****
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
