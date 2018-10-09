@@ -119,8 +119,70 @@ Predicate<Collection> p = c->c.isEmpty();
 List<String> l = new ArrayList<>();
 sout(c.test(l));
 
+Default methods for preficate functional interface:
+
+and()
+or()
+negate()
+
 Comparable - compareTo()
 Comparator - compare()
+
+*****Function*****
+
+interface Function<T R>{
+	public R apply(T t);
+}
+
+Function takes only one parameter from any kind of object, and return any kind of object
+
+Function<Integer, Integer> f1=i->i*i;
+Function<Employee,Employee> f2=e->{
+	e.salary += 477.0;
+	return e;
+};
+
+Default methods for Function functional interface
+
+//They are default methods of Function
+andThen()
+compose()
+
+//It is static method of Function
+//Returns a function that always returns its input argument.
+identity()
+
+Chaining functions:
+
+f1.andThen(f2)
+
+******Consumer*****
+
+Sometimes our requirements is we have to provide some input value, perform certain operations, but no required
+to return anything, then we should go for consumer i.e. Consumer can be used to consume objects and perform some
+operations.
+
+Consumer functional interface contains one SAM
+
+interface Consumer<T t>{
+	public void accept(T t);
+} 
+
+default metho - andThen
+c1.andThen(c2).andThen(c3).accept()
+
+Predicate - test()
+Function - apply()
+Consumer accept()
+
+*****Supplier*****
+
+supplier - get()
+
+
+
+
+
 
 
 
