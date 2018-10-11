@@ -168,7 +168,7 @@ interface Consumer<T t>{
 	public void accept(T t);
 } 
 
-default metho - andThen
+default method - andThen
 c1.andThen(c2).andThen(c3).accept()
 
 Predicate - test()
@@ -178,6 +178,88 @@ Consumer accept()
 *****Supplier*****
 
 supplier - get()
+
+it Only returns one constructed object.
+
+*****BiPredicate*****
+
+BiConsumer can take two input values.
+BiConsumer - test()
+
+****BiFunction*****
+
+BiFunctions can take two input values.
+BiFunction - apply()
+
+*****BiConsumer*****
+
+BiConsumer can take two input values.
+BiConsumer - accept()
+
+
+consumer  - accept()
+function  - apply()
+supplier  - get()
+predicate - test()
+
+javac -source 1.4 Test.java
+
+****prymitive type***
+IntPredicate
+LongPredicate
+DoublePredicate
+
+
+
+*****Functional interface with primitive types*****
+
+
+IntFunction<R>		Returns any type, but the parameter is int type.
+LongFunction<R>		Returns any type, but the parameter is long type.
+DobuleFunction<R>	Returns any type, but the parameter is double type.
+
+ToIntFunction<T>	Returns int type, but accept any object. 
+ToLongFunction<T>	Returns long type, but accept any object.
+ToDoubleFunction<T>	Returns double type, but accept any object.
+
+IntToLongFunction 	Returns long and accept int as parameter.
+IntToDoubleFunction Returns double and accept int as parameter.
+
+LongToIntFunction		Returns int and accepts long as parameter.	
+LongToDoubleFunction	Return double and accepts long as parameter.
+
+DoubleToIntFunction		Returns int and accept double as a parameter.
+DoubleToLongFunction	Returns long and accept double as a parameter.
+
+ToIntBiFunction		Takes two any object as parameters and return a int type.
+ToLongBiFunction	Takes two any object as parameters and return a long type.
+ToDoubleBiFunction	Takes two any object as parameters and return a double type.
+
+
+*****Consumer interface with primitive types*****
+
+IntConsumer 		Accept only int type as parameter
+LongConsumer		Accept only long type as parameter
+ObjIntConsumer 		Accept object and int type as parameters
+ObjLongConsumer 	Accept object and long type as parameters
+ObjdoubleConsumer 	Accept object and double type as parameters
+
+
+*****Supplier interface with primitive types*****
+
+IntSupplier		Return int type
+LongSupplier	Return long type	
+DoubleSupplier	Return double type
+BooleanSupplier	Return boolean type
+
+
+
+
+
+
+
+
+
 
 
 

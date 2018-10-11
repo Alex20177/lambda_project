@@ -25,5 +25,12 @@ public class Student {
 	public void setMark(int mark) {
 		this.mark = mark;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", mark=" + mark + "]";
+	}
+	
+	
 	
 }//Close Student
