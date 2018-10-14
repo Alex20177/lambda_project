@@ -35,6 +35,9 @@ public class TestArrayList {
 		//Using lambda expression
 		Collections.sort(l,(I1,I2)->(I1>I2)?-1:(I1<I2)?1:0);
 		
+		//(I1,I2)->(I1>I2)?-1:(I1<I2)?1:0
+		//I2.compareTo(I1)
+		
 		System.out.println("List descending order = "+l);
 		
 	}//Close main method.
