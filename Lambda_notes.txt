@@ -253,6 +253,12 @@ DoubleSupplier	Return double type
 BooleanSupplier	Return boolean type
 
 
+Comparator->compareTo()
+Runnable->run()
+ActionListener->actionPerformed()
+Callable->call()
+
+
 
 
 
